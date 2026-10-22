@@ -1,0 +1,601 @@
+ticket_id,risk_category,severity,region,channel,language,model_confidence,human_review_required
+DEMO-0000,Privacy concern,Medium,North America,Mobile app,English,0.92,True
+DEMO-0001,Billing safety escalation,High,Europe,Mobile app,Other,0.8,True
+DEMO-0002,Platform integrity,High,North America,Mobile app,English,0.9,True
+DEMO-0003,Misinformation,Medium,UK,Mobile app,Arabic,0.69,True
+DEMO-0004,Platform integrity,Medium,North America,Web form,Other,0.79,False
+DEMO-0005,Scam or fraud,High,Global / Unknown,Mobile app,Arabic,0.69,True
+DEMO-0006,Platform integrity,Medium,North America,Email support,Arabic,0.66,True
+DEMO-0007,Scam or fraud,High,Europe,Mobile app,English,0.9,True
+DEMO-0008,Scam or fraud,High,Global / Unknown,Web form,Other,0.89,True
+DEMO-0009,Platform integrity,Medium,North America,Web form,Arabic,0.81,False
+DEMO-0010,Platform integrity,High,North America,Email support,French,0.75,True
+DEMO-0011,Policy confusion,Low,North America,Web form,French,0.78,False
+DEMO-0012,Scam or fraud,High,North America,Email support,Other,0.87,True
+DEMO-0013,Harassment,Medium,North America,Web form,English,0.8,False
+DEMO-0014,Policy confusion,Medium,North America,Email support,Other,0.64,True
+DEMO-0015,Policy confusion,Medium,Global / Unknown,Email support,French,0.86,False
+DEMO-0016,Billing safety escalation,High,Europe,Email support,Other,0.68,True
+DEMO-0017,Harassment,Medium,Europe,Mobile app,Arabic,0.65,True
+DEMO-0018,Scam or fraud,High,North America,Mobile app,English,0.64,True
+DEMO-0019,Platform integrity,Medium,North America,Web form,Arabic,0.72,True
+DEMO-0020,Harassment,Medium,Europe,Mobile app,English,0.71,True
+DEMO-0021,Self-harm concern,High,North America,Web form,English,0.97,True
+DEMO-0022,Misinformation,Medium,Europe,Web form,English,0.86,False
+DEMO-0023,Billing safety escalation,High,Global / Unknown,Email support,English,0.76,True
+DEMO-0024,Account abuse,Medium,North America,Mobile app,French,0.71,True
+DEMO-0025,Self-harm concern,High,North America,Mobile app,English,0.83,True
+DEMO-0026,Harassment,Medium,North America,Mobile app,Other,0.72,True
+DEMO-0027,Billing safety escalation,High,Europe,Email support,English,0.64,True
+DEMO-0028,Platform integrity,Medium,UK,Web form,Arabic,0.67,True
+DEMO-0029,Policy confusion,Medium,Global / Unknown,Email support,French,0.75,False
+DEMO-0030,Billing safety escalation,High,North America,Email support,French,0.86,True
+DEMO-0031,Harassment,Medium,North America,Mobile app,Arabic,0.79,False
+DEMO-0032,Platform integrity,High,Global / Unknown,Web form,Other,0.71,True
+DEMO-0033,Misinformation,Medium,Europe,Web form,Arabic,0.89,False
+DEMO-0034,Platform integrity,High,Global / Unknown,Email support,English,0.94,True
+DEMO-0035,Misinformation,Medium,Europe,Web form,Other,0.82,False
+DEMO-0036,Privacy concern,Medium,UK,Web form,Other,0.95,True
+DEMO-0037,Child safety concern,Critical,Europe,Mobile app,English,0.86,True
+DEMO-0038,Policy confusion,Low,North America,Email support,English,0.87,False
+DEMO-0039,Platform integrity,High,Global / Unknown,Mobile app,English,0.65,True
+DEMO-0040,Harassment,Medium,Global / Unknown,Web form,Arabic,0.79,False
+DEMO-0041,Policy confusion,Low,Europe,Email support,English,0.71,True
+DEMO-0042,Platform integrity,Medium,Europe,Web form,French,0.88,False
+DEMO-0043,Child safety concern,Critical,Europe,Email support,French,0.67,True
+DEMO-0044,Policy confusion,Medium,UK,Mobile app,French,0.83,False
+DEMO-0045,Privacy concern,Medium,Europe,Web form,English,0.86,True
+DEMO-0046,Policy confusion,Low,UK,Mobile app,Other,0.78,False
+DEMO-0047,Harassment,Medium,UK,Mobile app,English,0.87,False
+DEMO-0048,Policy confusion,Medium,Europe,Web form,Other,0.73,True
+DEMO-0049,Billing safety escalation,High,Europe,Email support,Arabic,0.82,True
+DEMO-0050,Platform integrity,High,North America,Mobile app,French,0.63,True
+DEMO-0051,Child safety concern,Critical,Global / Unknown,Web form,French,0.71,True
+DEMO-0052,Child safety concern,Critical,Europe,Mobile app,English,0.78,True
+DEMO-0053,Platform integrity,Medium,UK,Web form,Arabic,0.74,True
+DEMO-0054,Self-harm concern,High,Global / Unknown,Web form,Arabic,0.72,True
+DEMO-0055,Privacy concern,Medium,North America,Mobile app,Arabic,0.92,True
+DEMO-0056,Policy confusion,Low,North America,Web form,French,0.78,False
+DEMO-0057,Billing safety escalation,High,Global / Unknown,Web form,Other,0.63,True
+DEMO-0058,Policy confusion,Low,Europe,Web form,Other,0.75,False
+DEMO-0059,Harassment,Medium,Global / Unknown,Web form,French,0.8,False
+DEMO-0060,Scam or fraud,High,Global / Unknown,Mobile app,Arabic,0.87,True
+DEMO-0061,Platform integrity,High,North America,Mobile app,French,0.7,True
+DEMO-0062,Harassment,Medium,Global / Unknown,Mobile app,French,0.81,False
+DEMO-0063,Scam or fraud,High,UK,Web form,English,0.94,True
+DEMO-0064,Platform integrity,High,Global / Unknown,Mobile app,Other,0.87,True
+DEMO-0065,Billing safety escalation,High,North America,Web form,Arabic,0.75,True
+DEMO-0066,Child safety concern,Critical,Europe,Mobile app,English,0.71,True
+DEMO-0067,Scam or fraud,High,Global / Unknown,Web form,English,0.66,True
+DEMO-0068,Billing safety escalation,High,North America,Mobile app,French,0.78,True
+DEMO-0069,Policy confusion,Medium,Europe,Email support,Other,0.82,False
+DEMO-0070,Platform integrity,High,Europe,Email support,English,0.77,True
+DEMO-0071,Account abuse,Medium,UK,Web form,French,0.89,False
+DEMO-0072,Misinformation,Medium,Europe,Email support,French,0.92,False
+DEMO-0073,Self-harm concern,High,Europe,Email support,English,0.88,True
+DEMO-0074,Platform integrity,Medium,Europe,Mobile app,English,0.67,True
+DEMO-0075,Privacy concern,Medium,Global / Unknown,Mobile app,French,0.67,True
+DEMO-0076,Harassment,Medium,Global / Unknown,Mobile app,Other,0.69,True
+DEMO-0077,Policy confusion,Low,UK,Email support,Arabic,0.68,True
+DEMO-0078,Harassment,Medium,UK,Mobile app,English,0.86,False
+DEMO-0079,Harassment,Medium,Europe,Email support,Other,0.72,True
+DEMO-0080,Platform integrity,Medium,Europe,Mobile app,French,0.85,False
+DEMO-0081,Privacy concern,Medium,Global / Unknown,Mobile app,French,0.74,True
+DEMO-0082,Privacy concern,Medium,North America,Email support,Other,0.73,True
+DEMO-0083,Harassment,Medium,Europe,Email support,English,0.86,False
+DEMO-0084,Scam or fraud,High,Global / Unknown,Web form,Arabic,0.66,True
+DEMO-0085,Platform integrity,Medium,Europe,Web form,English,0.78,False
+DEMO-0086,Policy confusion,Medium,Global / Unknown,Web form,Arabic,0.77,False
+DEMO-0087,Harassment,Medium,Global / Unknown,Web form,Arabic,0.84,False
+DEMO-0088,Privacy concern,Medium,Europe,Web form,Arabic,0.65,True
+DEMO-0089,Policy confusion,Low,UK,Mobile app,Arabic,0.68,True
+DEMO-0090,Platform integrity,High,Global / Unknown,Email support,French,0.8,True
+DEMO-0091,Platform integrity,Medium,Europe,Web form,Other,0.91,False
+DEMO-0092,Child safety concern,Critical,Europe,Mobile app,Other,0.89,True
+DEMO-0093,Account abuse,Medium,Global / Unknown,Mobile app,English,0.64,True
+DEMO-0094,Platform integrity,High,Global / Unknown,Web form,English,0.85,True
+DEMO-0095,Account abuse,Medium,North America,Web form,English,0.75,False
+DEMO-0096,Policy confusion,Medium,Global / Unknown,Mobile app,Arabic,0.91,False
+DEMO-0097,Platform integrity,Medium,Europe,Web form,French,0.72,True
+DEMO-0098,Harassment,Medium,North America,Mobile app,English,0.81,False
+DEMO-0099,Platform integrity,High,UK,Web form,Other,0.67,True
+DEMO-0100,Billing safety escalation,High,North America,Mobile app,Arabic,0.73,True
+DEMO-0101,Platform integrity,High,Europe,Mobile app,English,0.67,True
+DEMO-0102,Policy confusion,Low,Europe,Web form,Arabic,0.73,True
+DEMO-0103,Harassment,Medium,North America,Web form,Arabic,0.65,True
+DEMO-0104,Self-harm concern,High,North America,Web form,French,0.72,True
+DEMO-0105,Platform integrity,Medium,UK,Mobile app,Other,0.87,False
+DEMO-0106,Policy confusion,Medium,UK,Mobile app,Other,0.79,False
+DEMO-0107,Scam or fraud,High,North America,Email support,Other,0.88,True
+DEMO-0108,Policy confusion,Medium,North America,Mobile app,Other,0.83,False
+DEMO-0109,Platform integrity,High,Europe,Web form,English,0.65,True
+DEMO-0110,Platform integrity,Medium,UK,Web form,French,0.8,False
+DEMO-0111,Self-harm concern,High,Europe,Email support,Other,0.83,True
+DEMO-0112,Child safety concern,Critical,Europe,Mobile app,Arabic,0.65,True
+DEMO-0113,Billing safety escalation,High,Europe,Web form,French,0.96,True
+DEMO-0114,Billing safety escalation,High,North America,Web form,French,0.85,True
+DEMO-0115,Account abuse,Medium,UK,Mobile app,English,0.97,False
+DEMO-0116,Billing safety escalation,High,UK,Email support,French,0.68,True
+DEMO-0117,Harassment,Medium,UK,Email support,Other,0.69,True
+DEMO-0118,Harassment,Medium,Global / Unknown,Email support,Arabic,0.77,False
+DEMO-0119,Self-harm concern,High,UK,Email support,English,0.93,True
+DEMO-0120,Scam or fraud,High,Global / Unknown,Email support,French,0.67,True
+DEMO-0121,Billing safety escalation,High,Global / Unknown,Email support,English,0.89,True
+DEMO-0122,Harassment,Medium,Global / Unknown,Web form,French,0.66,True
+DEMO-0123,Platform integrity,High,UK,Web form,Arabic,0.7,True
+DEMO-0124,Platform integrity,Medium,Global / Unknown,Web form,English,0.74,True
+DEMO-0125,Policy confusion,Low,Europe,Mobile app,Other,0.85,False
+DEMO-0126,Policy confusion,Medium,North America,Web form,French,0.96,False
+DEMO-0127,Account abuse,Medium,UK,Email support,Other,0.73,True
+DEMO-0128,Harassment,Medium,UK,Web form,English,0.96,False
+DEMO-0129,Policy confusion,Medium,UK,Web form,Other,0.88,False
+DEMO-0130,Misinformation,Medium,UK,Email support,French,0.85,False
+DEMO-0131,Billing safety escalation,High,Global / Unknown,Mobile app,Arabic,0.82,True
+DEMO-0132,Policy confusion,Medium,North America,Web form,Arabic,0.9,False
+DEMO-0133,Child safety concern,Critical,Europe,Mobile app,French,0.83,True
+DEMO-0134,Harassment,Medium,Global / Unknown,Email support,Arabic,0.85,False
+DEMO-0135,Billing safety escalation,High,Europe,Web form,English,0.63,True
+DEMO-0136,Harassment,Medium,North America,Email support,Arabic,0.78,False
+DEMO-0137,Policy confusion,Medium,North America,Mobile app,Arabic,0.91,False
+DEMO-0138,Misinformation,Medium,Global / Unknown,Mobile app,French,0.77,False
+DEMO-0139,Privacy concern,Medium,UK,Email support,French,0.87,True
+DEMO-0140,Account abuse,Medium,Global / Unknown,Email support,Other,0.7,True
+DEMO-0141,Harassment,Medium,North America,Mobile app,French,0.98,False
+DEMO-0142,Self-harm concern,High,North America,Web form,Other,0.63,True
+DEMO-0143,Self-harm concern,High,North America,Web form,Other,0.88,True
+DEMO-0144,Policy confusion,Low,Europe,Email support,Other,0.88,False
+DEMO-0145,Privacy concern,Medium,North America,Email support,English,0.87,True
+DEMO-0146,Self-harm concern,High,North America,Email support,French,0.66,True
+DEMO-0147,Privacy concern,Medium,UK,Web form,Other,0.82,True
+DEMO-0148,Policy confusion,Medium,UK,Mobile app,Arabic,0.71,True
+DEMO-0149,Misinformation,Medium,Global / Unknown,Web form,French,0.9,False
+DEMO-0150,Child safety concern,Critical,Global / Unknown,Web form,French,0.9,True
+DEMO-0151,Misinformation,Medium,Global / Unknown,Email support,Arabic,0.82,False
+DEMO-0152,Platform integrity,High,Europe,Mobile app,Other,0.96,True
+DEMO-0153,Billing safety escalation,High,North America,Mobile app,Other,0.66,True
+DEMO-0154,Policy confusion,Medium,Global / Unknown,Mobile app,Arabic,0.63,True
+DEMO-0155,Account abuse,Medium,Global / Unknown,Email support,French,0.87,False
+DEMO-0156,Account abuse,Medium,UK,Mobile app,French,0.67,True
+DEMO-0157,Privacy concern,Medium,Global / Unknown,Email support,Other,0.91,True
+DEMO-0158,Misinformation,Medium,UK,Email support,English,0.73,True
+DEMO-0159,Child safety concern,Critical,North America,Mobile app,French,0.64,True
+DEMO-0160,Child safety concern,Critical,North America,Mobile app,Other,0.71,True
+DEMO-0161,Account abuse,Medium,Global / Unknown,Web form,Arabic,0.88,False
+DEMO-0162,Self-harm concern,High,Europe,Mobile app,Arabic,0.82,True
+DEMO-0163,Account abuse,Medium,Global / Unknown,Mobile app,Arabic,0.68,True
+DEMO-0164,Child safety concern,Critical,Global / Unknown,Web form,English,0.8,True
+DEMO-0165,Policy confusion,Low,UK,Web form,Other,0.65,True
+DEMO-0166,Platform integrity,Medium,Europe,Web form,English,0.74,True
+DEMO-0167,Platform integrity,High,UK,Web form,Arabic,0.9,True
+DEMO-0168,Child safety concern,Critical,North America,Mobile app,English,0.71,True
+DEMO-0169,Account abuse,Medium,UK,Mobile app,French,0.63,True
+DEMO-0170,Billing safety escalation,High,Global / Unknown,Mobile app,Other,0.97,True
+DEMO-0171,Platform integrity,High,Europe,Email support,English,0.89,True
+DEMO-0172,Platform integrity,High,Europe,Web form,French,0.69,True
+DEMO-0173,Self-harm concern,High,Europe,Mobile app,Other,0.97,True
+DEMO-0174,Billing safety escalation,High,UK,Mobile app,French,0.7,True
+DEMO-0175,Privacy concern,Medium,Europe,Mobile app,Other,0.8,True
+DEMO-0176,Account abuse,Medium,North America,Email support,French,0.73,True
+DEMO-0177,Billing safety escalation,High,North America,Mobile app,Arabic,0.88,True
+DEMO-0178,Billing safety escalation,High,North America,Email support,French,0.8,True
+DEMO-0179,Self-harm concern,High,Global / Unknown,Web form,Other,0.79,True
+DEMO-0180,Billing safety escalation,High,UK,Web form,Arabic,0.65,True
+DEMO-0181,Billing safety escalation,High,Global / Unknown,Web form,Arabic,0.78,True
+DEMO-0182,Policy confusion,Low,UK,Email support,Arabic,0.72,True
+DEMO-0183,Platform integrity,Medium,Global / Unknown,Email support,French,0.7,True
+DEMO-0184,Self-harm concern,High,UK,Mobile app,Arabic,0.83,True
+DEMO-0185,Child safety concern,Critical,Europe,Email support,French,0.88,True
+DEMO-0186,Harassment,Medium,North America,Web form,Arabic,0.67,True
+DEMO-0187,Account abuse,Medium,UK,Web form,French,0.75,False
+DEMO-0188,Account abuse,Medium,Europe,Web form,French,0.85,False
+DEMO-0189,Scam or fraud,High,UK,Mobile app,English,0.78,True
+DEMO-0190,Misinformation,Medium,Global / Unknown,Email support,Other,0.97,False
+DEMO-0191,Child safety concern,Critical,Global / Unknown,Email support,Other,0.69,True
+DEMO-0192,Platform integrity,High,UK,Email support,French,0.89,True
+DEMO-0193,Child safety concern,Critical,North America,Web form,French,0.87,True
+DEMO-0194,Privacy concern,Medium,Global / Unknown,Mobile app,Arabic,0.74,True
+DEMO-0195,Privacy concern,Medium,UK,Email support,English,0.91,True
+DEMO-0196,Policy confusion,Low,UK,Email support,French,0.88,False
+DEMO-0197,Scam or fraud,High,Global / Unknown,Email support,English,0.92,True
+DEMO-0198,Platform integrity,Medium,UK,Mobile app,French,0.65,True
+DEMO-0199,Scam or fraud,High,UK,Web form,Arabic,0.84,True
+DEMO-0200,Self-harm concern,High,North America,Email support,Other,0.88,True
+DEMO-0201,Harassment,Medium,UK,Email support,English,0.65,True
+DEMO-0202,Self-harm concern,High,Global / Unknown,Email support,English,0.88,True
+DEMO-0203,Self-harm concern,High,Europe,Mobile app,Arabic,0.85,True
+DEMO-0204,Account abuse,Medium,UK,Email support,French,0.97,False
+DEMO-0205,Billing safety escalation,High,Global / Unknown,Mobile app,English,0.66,True
+DEMO-0206,Account abuse,Medium,Europe,Web form,French,0.71,True
+DEMO-0207,Policy confusion,Medium,Global / Unknown,Web form,Other,0.82,False
+DEMO-0208,Billing safety escalation,High,North America,Web form,Other,0.82,True
+DEMO-0209,Billing safety escalation,High,UK,Mobile app,Arabic,0.97,True
+DEMO-0210,Account abuse,Medium,Global / Unknown,Email support,Arabic,0.78,False
+DEMO-0211,Account abuse,Medium,Global / Unknown,Web form,Other,0.85,False
+DEMO-0212,Policy confusion,Medium,Europe,Web form,English,0.78,False
+DEMO-0213,Account abuse,Medium,Europe,Mobile app,French,0.73,True
+DEMO-0214,Scam or fraud,High,UK,Mobile app,Arabic,0.82,True
+DEMO-0215,Self-harm concern,High,UK,Mobile app,Other,0.93,True
+DEMO-0216,Billing safety escalation,High,North America,Mobile app,English,0.91,True
+DEMO-0217,Misinformation,Medium,Global / Unknown,Email support,French,0.87,False
+DEMO-0218,Policy confusion,Medium,Global / Unknown,Mobile app,Arabic,0.74,True
+DEMO-0219,Harassment,Medium,Global / Unknown,Web form,English,0.79,False
+DEMO-0220,Self-harm concern,High,UK,Mobile app,Arabic,0.65,True
+DEMO-0221,Platform integrity,Medium,UK,Web form,French,0.75,False
+DEMO-0222,Self-harm concern,High,UK,Email support,Other,0.88,True
+DEMO-0223,Privacy concern,Medium,Europe,Web form,English,0.69,True
+DEMO-0224,Misinformation,Medium,UK,Web form,French,0.74,True
+DEMO-0225,Self-harm concern,High,North America,Mobile app,English,0.73,True
+DEMO-0226,Policy confusion,Low,North America,Mobile app,English,0.67,True
+DEMO-0227,Child safety concern,Critical,Global / Unknown,Mobile app,Arabic,0.92,True
+DEMO-0228,Self-harm concern,High,Global / Unknown,Email support,English,0.83,True
+DEMO-0229,Platform integrity,High,UK,Web form,French,0.74,True
+DEMO-0230,Child safety concern,Critical,North America,Mobile app,Other,0.91,True
+DEMO-0231,Self-harm concern,High,North America,Mobile app,Other,0.74,True
+DEMO-0232,Billing safety escalation,High,Europe,Email support,Arabic,0.97,True
+DEMO-0233,Billing safety escalation,High,Global / Unknown,Mobile app,English,0.7,True
+DEMO-0234,Child safety concern,Critical,Europe,Mobile app,Other,0.93,True
+DEMO-0235,Policy confusion,Medium,UK,Web form,Other,0.75,False
+DEMO-0236,Harassment,Medium,North America,Email support,Other,0.63,True
+DEMO-0237,Billing safety escalation,High,UK,Email support,Arabic,0.64,True
+DEMO-0238,Harassment,Medium,Global / Unknown,Web form,English,0.66,True
+DEMO-0239,Platform integrity,Medium,Global / Unknown,Email support,English,0.85,False
+DEMO-0240,Account abuse,Medium,Global / Unknown,Email support,Other,0.63,True
+DEMO-0241,Platform integrity,High,UK,Mobile app,English,0.86,True
+DEMO-0242,Child safety concern,Critical,North America,Email support,French,0.72,True
+DEMO-0243,Harassment,Medium,Global / Unknown,Web form,English,0.88,False
+DEMO-0244,Privacy concern,Medium,Europe,Web form,English,0.78,True
+DEMO-0245,Platform integrity,Medium,Global / Unknown,Mobile app,English,0.78,False
+DEMO-0246,Platform integrity,Medium,Global / Unknown,Mobile app,English,0.95,False
+DEMO-0247,Child safety concern,Critical,UK,Mobile app,English,0.9,True
+DEMO-0248,Scam or fraud,High,Europe,Web form,Other,0.75,True
+DEMO-0249,Self-harm concern,High,North America,Mobile app,Other,0.83,True
+DEMO-0250,Billing safety escalation,High,UK,Email support,English,0.75,True
+DEMO-0251,Platform integrity,High,UK,Mobile app,Arabic,0.74,True
+DEMO-0252,Harassment,Medium,Global / Unknown,Email support,English,0.7,True
+DEMO-0253,Account abuse,Medium,Global / Unknown,Mobile app,Other,0.63,True
+DEMO-0254,Harassment,Medium,UK,Web form,Other,0.95,False
+DEMO-0255,Policy confusion,Low,UK,Email support,French,0.75,False
+DEMO-0256,Billing safety escalation,High,Global / Unknown,Web form,Other,0.92,True
+DEMO-0257,Policy confusion,Low,North America,Mobile app,French,0.81,False
+DEMO-0258,Platform integrity,Medium,Europe,Mobile app,Arabic,0.72,True
+DEMO-0259,Privacy concern,Medium,North America,Email support,French,0.63,True
+DEMO-0260,Platform integrity,Medium,UK,Email support,English,0.88,False
+DEMO-0261,Self-harm concern,High,Europe,Mobile app,English,0.9,True
+DEMO-0262,Self-harm concern,High,North America,Mobile app,English,0.89,True
+DEMO-0263,Harassment,Medium,Global / Unknown,Email support,Other,0.86,False
+DEMO-0264,Platform integrity,High,North America,Web form,Other,0.93,True
+DEMO-0265,Billing safety escalation,High,Europe,Web form,Arabic,0.69,True
+DEMO-0266,Child safety concern,Critical,North America,Web form,Arabic,0.74,True
+DEMO-0267,Child safety concern,Critical,Global / Unknown,Mobile app,Arabic,0.77,True
+DEMO-0268,Policy confusion,Low,Europe,Email support,Other,0.79,False
+DEMO-0269,Policy confusion,Medium,North America,Web form,Other,0.98,False
+DEMO-0270,Privacy concern,Medium,Europe,Mobile app,Other,0.74,True
+DEMO-0271,Misinformation,Medium,UK,Web form,Other,0.69,True
+DEMO-0272,Account abuse,Medium,Global / Unknown,Mobile app,Other,0.74,True
+DEMO-0273,Platform integrity,Medium,Europe,Mobile app,French,0.87,False
+DEMO-0274,Privacy concern,Medium,Global / Unknown,Mobile app,Arabic,0.65,True
+DEMO-0275,Harassment,Medium,North America,Mobile app,French,0.94,False
+DEMO-0276,Misinformation,Medium,North America,Web form,Arabic,0.91,False
+DEMO-0277,Policy confusion,Medium,Europe,Email support,Arabic,0.85,False
+DEMO-0278,Privacy concern,Medium,North America,Email support,English,0.72,True
+DEMO-0279,Scam or fraud,High,UK,Email support,French,0.89,True
+DEMO-0280,Privacy concern,Medium,Europe,Email support,English,0.83,True
+DEMO-0281,Child safety concern,Critical,North America,Web form,English,0.81,True
+DEMO-0282,Policy confusion,Medium,Europe,Mobile app,English,0.77,False
+DEMO-0283,Platform integrity,Medium,Europe,Web form,Arabic,0.82,False
+DEMO-0284,Account abuse,Medium,Global / Unknown,Web form,Arabic,0.66,True
+DEMO-0285,Privacy concern,Medium,Global / Unknown,Web form,Other,0.93,True
+DEMO-0286,Platform integrity,Medium,Europe,Email support,Arabic,0.79,False
+DEMO-0287,Scam or fraud,High,North America,Mobile app,English,0.87,True
+DEMO-0288,Scam or fraud,High,Global / Unknown,Mobile app,French,0.75,True
+DEMO-0289,Privacy concern,Medium,Global / Unknown,Web form,Arabic,0.84,True
+DEMO-0290,Misinformation,Medium,North America,Email support,English,0.83,False
+DEMO-0291,Scam or fraud,High,Europe,Web form,French,0.83,True
+DEMO-0292,Platform integrity,High,Europe,Mobile app,Other,0.9,True
+DEMO-0293,Billing safety escalation,High,Global / Unknown,Web form,Other,0.64,True
+DEMO-0294,Child safety concern,Critical,Europe,Mobile app,Other,0.71,True
+DEMO-0295,Child safety concern,Critical,Global / Unknown,Email support,Other,0.72,True
+DEMO-0296,Privacy concern,Medium,Global / Unknown,Web form,Arabic,0.83,True
+DEMO-0297,Platform integrity,High,Europe,Web form,French,0.78,True
+DEMO-0298,Privacy concern,Medium,UK,Web form,English,0.68,True
+DEMO-0299,Policy confusion,Medium,North America,Mobile app,Other,0.89,False
+DEMO-0300,Harassment,Medium,UK,Mobile app,French,0.86,False
+DEMO-0301,Child safety concern,Critical,Europe,Mobile app,English,0.75,True
+DEMO-0302,Scam or fraud,High,North America,Web form,Other,0.9,True
+DEMO-0303,Misinformation,Medium,Europe,Mobile app,Other,0.68,True
+DEMO-0304,Misinformation,Medium,Europe,Email support,Other,0.65,True
+DEMO-0305,Billing safety escalation,High,Europe,Email support,Arabic,0.95,True
+DEMO-0306,Self-harm concern,High,North America,Email support,French,0.94,True
+DEMO-0307,Platform integrity,High,UK,Web form,Arabic,0.75,True
+DEMO-0308,Policy confusion,Medium,Europe,Email support,English,0.79,False
+DEMO-0309,Privacy concern,Medium,North America,Mobile app,French,0.95,True
+DEMO-0310,Misinformation,Medium,North America,Email support,French,0.78,False
+DEMO-0311,Platform integrity,High,Europe,Mobile app,English,0.7,True
+DEMO-0312,Platform integrity,Medium,North America,Web form,Arabic,0.98,False
+DEMO-0313,Scam or fraud,High,Global / Unknown,Mobile app,French,0.67,True
+DEMO-0314,Harassment,Medium,Global / Unknown,Web form,Other,0.94,False
+DEMO-0315,Misinformation,Medium,North America,Web form,English,0.7,True
+DEMO-0316,Harassment,Medium,Europe,Web form,Other,0.65,True
+DEMO-0317,Privacy concern,Medium,North America,Web form,Other,0.92,True
+DEMO-0318,Policy confusion,Medium,North America,Web form,Other,0.76,False
+DEMO-0319,Child safety concern,Critical,North America,Mobile app,French,0.98,True
+DEMO-0320,Scam or fraud,High,Europe,Web form,French,0.87,True
+DEMO-0321,Policy confusion,Low,Europe,Email support,English,0.63,True
+DEMO-0322,Billing safety escalation,High,Global / Unknown,Web form,French,0.86,True
+DEMO-0323,Misinformation,Medium,Europe,Web form,French,0.95,False
+DEMO-0324,Platform integrity,High,Global / Unknown,Mobile app,Other,0.86,True
+DEMO-0325,Account abuse,Medium,Europe,Email support,Other,0.9,False
+DEMO-0326,Account abuse,Medium,Global / Unknown,Email support,Other,0.81,False
+DEMO-0327,Scam or fraud,High,Global / Unknown,Email support,English,0.97,True
+DEMO-0328,Policy confusion,Low,Europe,Email support,French,0.97,False
+DEMO-0329,Self-harm concern,High,Global / Unknown,Mobile app,English,0.8,True
+DEMO-0330,Policy confusion,Medium,UK,Mobile app,Other,0.95,False
+DEMO-0331,Account abuse,Medium,Europe,Web form,French,0.97,False
+DEMO-0332,Policy confusion,Medium,Global / Unknown,Email support,Other,0.9,False
+DEMO-0333,Platform integrity,High,Global / Unknown,Mobile app,English,0.62,True
+DEMO-0334,Harassment,Medium,Europe,Mobile app,Arabic,0.91,False
+DEMO-0335,Privacy concern,Medium,North America,Mobile app,Other,0.92,True
+DEMO-0336,Policy confusion,Low,Global / Unknown,Mobile app,Arabic,0.68,True
+DEMO-0337,Billing safety escalation,High,Global / Unknown,Mobile app,Other,0.98,True
+DEMO-0338,Self-harm concern,High,Europe,Web form,Arabic,0.69,True
+DEMO-0339,Privacy concern,Medium,Europe,Web form,French,0.65,True
+DEMO-0340,Account abuse,Medium,North America,Email support,French,0.72,True
+DEMO-0341,Platform integrity,High,North America,Web form,English,0.88,True
+DEMO-0342,Billing safety escalation,High,North America,Web form,Other,0.85,True
+DEMO-0343,Privacy concern,Medium,UK,Mobile app,English,0.76,True
+DEMO-0344,Platform integrity,High,North America,Web form,English,0.86,True
+DEMO-0345,Self-harm concern,High,Europe,Web form,Arabic,0.83,True
+DEMO-0346,Privacy concern,Medium,UK,Email support,French,0.86,True
+DEMO-0347,Policy confusion,Medium,UK,Email support,Other,0.71,True
+DEMO-0348,Policy confusion,Medium,Global / Unknown,Mobile app,French,0.67,True
+DEMO-0349,Child safety concern,Critical,UK,Mobile app,Arabic,0.7,True
+DEMO-0350,Harassment,Medium,Global / Unknown,Web form,Other,0.65,True
+DEMO-0351,Platform integrity,Medium,Europe,Web form,English,0.74,True
+DEMO-0352,Scam or fraud,High,North America,Web form,Arabic,0.74,True
+DEMO-0353,Misinformation,Medium,Europe,Email support,French,0.62,True
+DEMO-0354,Policy confusion,Medium,Europe,Mobile app,English,0.82,False
+DEMO-0355,Platform integrity,High,Global / Unknown,Mobile app,French,0.91,True
+DEMO-0356,Harassment,Medium,UK,Mobile app,English,0.9,False
+DEMO-0357,Harassment,Medium,UK,Email support,Arabic,0.85,False
+DEMO-0358,Billing safety escalation,High,North America,Mobile app,English,0.89,True
+DEMO-0359,Platform integrity,High,UK,Mobile app,Other,0.75,True
+DEMO-0360,Scam or fraud,High,UK,Email support,English,0.67,True
+DEMO-0361,Scam or fraud,High,North America,Mobile app,Other,0.85,True
+DEMO-0362,Billing safety escalation,High,UK,Email support,English,0.73,True
+DEMO-0363,Scam or fraud,High,UK,Web form,Arabic,0.74,True
+DEMO-0364,Harassment,Medium,Europe,Email support,French,0.69,True
+DEMO-0365,Scam or fraud,High,North America,Web form,Arabic,0.69,True
+DEMO-0366,Child safety concern,Critical,Europe,Mobile app,Other,0.67,True
+DEMO-0367,Misinformation,Medium,North America,Mobile app,Arabic,0.86,False
+DEMO-0368,Policy confusion,Low,UK,Web form,Other,0.67,True
+DEMO-0369,Self-harm concern,High,Global / Unknown,Mobile app,Arabic,0.91,True
+DEMO-0370,Privacy concern,Medium,UK,Mobile app,French,0.95,True
+DEMO-0371,Scam or fraud,High,Global / Unknown,Mobile app,Other,0.97,True
+DEMO-0372,Self-harm concern,High,Europe,Web form,French,0.91,True
+DEMO-0373,Self-harm concern,High,UK,Email support,Arabic,0.91,True
+DEMO-0374,Privacy concern,Medium,North America,Email support,French,0.97,True
+DEMO-0375,Scam or fraud,High,North America,Mobile app,Arabic,0.67,True
+DEMO-0376,Scam or fraud,High,Europe,Mobile app,Other,0.97,True
+DEMO-0377,Misinformation,Medium,UK,Mobile app,Other,0.87,False
+DEMO-0378,Self-harm concern,High,UK,Web form,French,0.97,True
+DEMO-0379,Account abuse,Medium,Europe,Mobile app,English,0.74,True
+DEMO-0380,Policy confusion,Medium,UK,Web form,French,0.84,False
+DEMO-0381,Billing safety escalation,High,Global / Unknown,Mobile app,Arabic,0.89,True
+DEMO-0382,Self-harm concern,High,North America,Mobile app,Other,0.76,True
+DEMO-0383,Policy confusion,Medium,Europe,Email support,Other,0.76,False
+DEMO-0384,Policy confusion,Low,Global / Unknown,Mobile app,English,0.83,False
+DEMO-0385,Platform integrity,High,UK,Web form,French,0.86,True
+DEMO-0386,Child safety concern,Critical,Global / Unknown,Mobile app,Arabic,0.9,True
+DEMO-0387,Privacy concern,Medium,UK,Web form,Arabic,0.68,True
+DEMO-0388,Policy confusion,Low,North America,Mobile app,Arabic,0.93,False
+DEMO-0389,Privacy concern,Medium,Global / Unknown,Mobile app,French,0.68,True
+DEMO-0390,Child safety concern,Critical,North America,Mobile app,Arabic,0.82,True
+DEMO-0391,Platform integrity,High,UK,Web form,English,0.65,True
+DEMO-0392,Child safety concern,Critical,Global / Unknown,Email support,Other,0.66,True
+DEMO-0393,Billing safety escalation,High,Global / Unknown,Mobile app,French,0.69,True
+DEMO-0394,Platform integrity,Medium,UK,Web form,English,0.92,False
+DEMO-0395,Platform integrity,High,Global / Unknown,Email support,Other,0.66,True
+DEMO-0396,Self-harm concern,High,UK,Email support,Arabic,0.95,True
+DEMO-0397,Platform integrity,Medium,Europe,Mobile app,Other,0.81,False
+DEMO-0398,Policy confusion,Low,North America,Email support,Arabic,0.79,False
+DEMO-0399,Billing safety escalation,High,Global / Unknown,Web form,Other,0.82,True
+DEMO-0400,Policy confusion,Medium,Global / Unknown,Mobile app,Other,0.79,False
+DEMO-0401,Harassment,Medium,Europe,Email support,Arabic,0.97,False
+DEMO-0402,Misinformation,Medium,Europe,Web form,French,0.96,False
+DEMO-0403,Policy confusion,Low,UK,Email support,Arabic,0.91,False
+DEMO-0404,Platform integrity,Medium,North America,Web form,French,0.97,False
+DEMO-0405,Account abuse,Medium,UK,Email support,French,0.77,False
+DEMO-0406,Policy confusion,Medium,Europe,Email support,English,0.71,True
+DEMO-0407,Platform integrity,Medium,UK,Mobile app,English,0.68,True
+DEMO-0408,Policy confusion,Low,Global / Unknown,Web form,Arabic,0.91,False
+DEMO-0409,Policy confusion,Low,North America,Mobile app,Arabic,0.94,False
+DEMO-0410,Privacy concern,Medium,Global / Unknown,Email support,Arabic,0.72,True
+DEMO-0411,Platform integrity,Medium,Europe,Email support,English,0.9,False
+DEMO-0412,Platform integrity,Medium,Global / Unknown,Email support,Arabic,0.83,False
+DEMO-0413,Misinformation,Medium,Global / Unknown,Email support,French,0.91,False
+DEMO-0414,Platform integrity,Medium,Europe,Email support,English,0.81,False
+DEMO-0415,Policy confusion,Medium,North America,Email support,English,0.85,False
+DEMO-0416,Policy confusion,Medium,UK,Email support,Other,0.64,True
+DEMO-0417,Harassment,Medium,UK,Mobile app,Other,0.87,False
+DEMO-0418,Platform integrity,High,Global / Unknown,Web form,Arabic,0.71,True
+DEMO-0419,Platform integrity,High,North America,Email support,English,0.84,True
+DEMO-0420,Self-harm concern,High,Global / Unknown,Email support,Other,0.83,True
+DEMO-0421,Child safety concern,Critical,Global / Unknown,Mobile app,French,0.64,True
+DEMO-0422,Account abuse,Medium,North America,Web form,Other,0.65,True
+DEMO-0423,Self-harm concern,High,UK,Mobile app,Other,0.85,True
+DEMO-0424,Policy confusion,Medium,UK,Email support,French,0.76,False
+DEMO-0425,Platform integrity,Medium,Global / Unknown,Email support,French,0.8,False
+DEMO-0426,Policy confusion,Medium,North America,Mobile app,English,0.66,True
+DEMO-0427,Platform integrity,High,UK,Email support,French,0.65,True
+DEMO-0428,Platform integrity,High,UK,Web form,Other,0.87,True
+DEMO-0429,Billing safety escalation,High,UK,Web form,French,0.9,True
+DEMO-0430,Billing safety escalation,High,UK,Email support,French,0.93,True
+DEMO-0431,Policy confusion,Medium,UK,Web form,Arabic,0.94,False
+DEMO-0432,Platform integrity,High,North America,Web form,Arabic,0.89,True
+DEMO-0433,Privacy concern,Medium,Global / Unknown,Mobile app,Arabic,0.74,True
+DEMO-0434,Misinformation,Medium,North America,Web form,Arabic,0.8,False
+DEMO-0435,Scam or fraud,High,North America,Email support,French,0.71,True
+DEMO-0436,Account abuse,Medium,Europe,Web form,Other,0.74,True
+DEMO-0437,Policy confusion,Low,Europe,Email support,French,0.64,True
+DEMO-0438,Harassment,Medium,Europe,Web form,Arabic,0.77,False
+DEMO-0439,Billing safety escalation,High,UK,Mobile app,Arabic,0.92,True
+DEMO-0440,Policy confusion,Low,UK,Email support,English,0.64,True
+DEMO-0441,Platform integrity,High,UK,Email support,Arabic,0.94,True
+DEMO-0442,Policy confusion,Low,Europe,Mobile app,Arabic,0.81,False
+DEMO-0443,Privacy concern,Medium,UK,Mobile app,French,0.62,True
+DEMO-0444,Misinformation,Medium,Global / Unknown,Email support,English,0.86,False
+DEMO-0445,Misinformation,Medium,Global / Unknown,Email support,Other,0.67,True
+DEMO-0446,Account abuse,Medium,Global / Unknown,Mobile app,English,0.86,False
+DEMO-0447,Platform integrity,High,Europe,Email support,Other,0.75,True
+DEMO-0448,Policy confusion,Low,Global / Unknown,Email support,Other,0.95,False
+DEMO-0449,Misinformation,Medium,UK,Mobile app,Other,0.71,True
+DEMO-0450,Policy confusion,Low,Europe,Email support,French,0.98,False
+DEMO-0451,Scam or fraud,High,UK,Email support,English,0.87,True
+DEMO-0452,Platform integrity,Medium,Global / Unknown,Email support,Arabic,0.85,False
+DEMO-0453,Privacy concern,Medium,Europe,Mobile app,English,0.91,True
+DEMO-0454,Misinformation,Medium,UK,Web form,Arabic,0.67,True
+DEMO-0455,Billing safety escalation,High,Global / Unknown,Web form,Other,0.88,True
+DEMO-0456,Platform integrity,Medium,Europe,Email support,Arabic,0.71,True
+DEMO-0457,Scam or fraud,High,UK,Email support,French,0.91,True
+DEMO-0458,Platform integrity,Medium,Global / Unknown,Mobile app,French,0.72,True
+DEMO-0459,Policy confusion,Low,Global / Unknown,Web form,English,0.65,True
+DEMO-0460,Harassment,Medium,UK,Mobile app,Other,0.72,True
+DEMO-0461,Billing safety escalation,High,UK,Web form,Arabic,0.67,True
+DEMO-0462,Account abuse,Medium,UK,Email support,French,0.95,False
+DEMO-0463,Policy confusion,Low,UK,Mobile app,Arabic,0.83,False
+DEMO-0464,Misinformation,Medium,UK,Email support,Other,0.67,True
+DEMO-0465,Account abuse,Medium,North America,Email support,Other,0.69,True
+DEMO-0466,Child safety concern,Critical,UK,Web form,English,0.78,True
+DEMO-0467,Account abuse,Medium,Europe,Mobile app,Arabic,0.9,False
+DEMO-0468,Platform integrity,High,Global / Unknown,Email support,Arabic,0.91,True
+DEMO-0469,Platform integrity,Medium,Europe,Email support,English,0.64,True
+DEMO-0470,Misinformation,Medium,UK,Mobile app,Other,0.65,True
+DEMO-0471,Child safety concern,Critical,UK,Mobile app,Arabic,0.64,True
+DEMO-0472,Privacy concern,Medium,Europe,Email support,Other,0.88,True
+DEMO-0473,Self-harm concern,High,UK,Email support,Other,0.9,True
+DEMO-0474,Harassment,Medium,UK,Web form,Arabic,0.78,False
+DEMO-0475,Misinformation,Medium,Europe,Email support,French,0.9,False
+DEMO-0476,Privacy concern,Medium,Europe,Email support,Arabic,0.87,True
+DEMO-0477,Policy confusion,Medium,Global / Unknown,Mobile app,English,0.74,True
+DEMO-0478,Misinformation,Medium,North America,Mobile app,French,0.63,True
+DEMO-0479,Policy confusion,Low,Global / Unknown,Mobile app,Other,0.72,True
+DEMO-0480,Scam or fraud,High,Global / Unknown,Email support,Arabic,0.83,True
+DEMO-0481,Platform integrity,Medium,North America,Email support,Arabic,0.71,True
+DEMO-0482,Privacy concern,Medium,UK,Email support,Other,0.69,True
+DEMO-0483,Harassment,Medium,North America,Web form,English,0.74,True
+DEMO-0484,Billing safety escalation,High,North America,Email support,French,0.92,True
+DEMO-0485,Privacy concern,Medium,North America,Email support,Arabic,0.97,True
+DEMO-0486,Scam or fraud,High,Global / Unknown,Email support,French,0.71,True
+DEMO-0487,Misinformation,Medium,Global / Unknown,Mobile app,French,0.76,False
+DEMO-0488,Platform integrity,High,Global / Unknown,Email support,Arabic,0.67,True
+DEMO-0489,Policy confusion,Medium,UK,Web form,Arabic,0.81,False
+DEMO-0490,Privacy concern,Medium,Global / Unknown,Email support,French,0.83,True
+DEMO-0491,Policy confusion,Low,North America,Mobile app,Arabic,0.95,False
+DEMO-0492,Platform integrity,High,UK,Email support,French,0.77,True
+DEMO-0493,Platform integrity,High,North America,Mobile app,Other,0.73,True
+DEMO-0494,Harassment,Medium,UK,Email support,English,0.88,False
+DEMO-0495,Platform integrity,High,Global / Unknown,Mobile app,French,0.73,True
+DEMO-0496,Policy confusion,Low,North America,Email support,Other,0.62,True
+DEMO-0497,Account abuse,Medium,Global / Unknown,Mobile app,French,0.87,False
+DEMO-0498,Child safety concern,Critical,Europe,Web form,Arabic,0.8,True
+DEMO-0499,Child safety concern,Critical,Europe,Email support,Other,0.86,True
+DEMO-0500,Harassment,Medium,Europe,Web form,Arabic,0.88,False
+DEMO-0501,Harassment,Medium,North America,Web form,English,0.71,True
+DEMO-0502,Harassment,Medium,Global / Unknown,Email support,French,0.67,True
+DEMO-0503,Misinformation,Medium,Europe,Email support,English,0.88,False
+DEMO-0504,Child safety concern,Critical,Europe,Web form,Arabic,0.92,True
+DEMO-0505,Misinformation,Medium,Global / Unknown,Web form,Other,0.89,False
+DEMO-0506,Platform integrity,Medium,Europe,Email support,English,0.85,False
+DEMO-0507,Billing safety escalation,High,Global / Unknown,Web form,French,0.81,True
+DEMO-0508,Child safety concern,Critical,Europe,Mobile app,Arabic,0.72,True
+DEMO-0509,Policy confusion,Medium,Global / Unknown,Email support,English,0.85,False
+DEMO-0510,Harassment,Medium,Global / Unknown,Email support,Arabic,0.97,False
+DEMO-0511,Harassment,Medium,North America,Email support,French,0.68,True
+DEMO-0512,Policy confusion,Medium,Global / Unknown,Web form,French,0.73,True
+DEMO-0513,Platform integrity,High,Global / Unknown,Web form,English,0.7,True
+DEMO-0514,Privacy concern,Medium,North America,Mobile app,Arabic,0.88,True
+DEMO-0515,Misinformation,Medium,Global / Unknown,Email support,Arabic,0.84,False
+DEMO-0516,Child safety concern,Critical,Global / Unknown,Mobile app,Arabic,0.63,True
+DEMO-0517,Self-harm concern,High,North America,Email support,Other,0.85,True
+DEMO-0518,Privacy concern,Medium,North America,Mobile app,Arabic,0.81,True
+DEMO-0519,Child safety concern,Critical,Europe,Web form,English,0.75,True
+DEMO-0520,Self-harm concern,High,North America,Email support,Other,0.84,True
+DEMO-0521,Child safety concern,Critical,UK,Mobile app,Arabic,0.87,True
+DEMO-0522,Harassment,Medium,Global / Unknown,Mobile app,French,0.77,False
+DEMO-0523,Account abuse,Medium,Global / Unknown,Mobile app,French,0.78,False
+DEMO-0524,Platform integrity,Medium,North America,Mobile app,Arabic,0.88,False
+DEMO-0525,Billing safety escalation,High,Global / Unknown,Email support,English,0.64,True
+DEMO-0526,Misinformation,Medium,North America,Email support,Arabic,0.86,False
+DEMO-0527,Policy confusion,Medium,Europe,Web form,Arabic,0.84,False
+DEMO-0528,Policy confusion,Medium,Global / Unknown,Web form,English,0.74,True
+DEMO-0529,Platform integrity,High,Global / Unknown,Email support,French,0.94,True
+DEMO-0530,Policy confusion,Medium,UK,Mobile app,French,0.82,False
+DEMO-0531,Policy confusion,Medium,Global / Unknown,Web form,Other,0.94,False
+DEMO-0532,Policy confusion,Medium,Global / Unknown,Mobile app,French,0.88,False
+DEMO-0533,Billing safety escalation,High,Europe,Email support,Other,0.82,True
+DEMO-0534,Account abuse,Medium,Global / Unknown,Email support,Arabic,0.7,True
+DEMO-0535,Harassment,Medium,Europe,Mobile app,French,0.78,False
+DEMO-0536,Policy confusion,Medium,North America,Email support,English,0.95,False
+DEMO-0537,Account abuse,Medium,Europe,Email support,Arabic,0.9,False
+DEMO-0538,Child safety concern,Critical,Global / Unknown,Mobile app,English,0.87,True
+DEMO-0539,Platform integrity,Medium,Global / Unknown,Email support,English,0.97,False
+DEMO-0540,Policy confusion,Low,Global / Unknown,Web form,French,0.66,True
+DEMO-0541,Policy confusion,Medium,Europe,Web form,Arabic,0.74,True
+DEMO-0542,Child safety concern,Critical,Europe,Mobile app,English,0.95,True
+DEMO-0543,Platform integrity,Medium,Europe,Web form,French,0.67,True
+DEMO-0544,Self-harm concern,High,UK,Web form,Arabic,0.73,True
+DEMO-0545,Billing safety escalation,High,Global / Unknown,Web form,English,0.8,True
+DEMO-0546,Misinformation,Medium,Europe,Web form,Other,0.75,False
+DEMO-0547,Self-harm concern,High,Europe,Mobile app,Arabic,0.75,True
+DEMO-0548,Self-harm concern,High,North America,Web form,French,0.93,True
+DEMO-0549,Platform integrity,Medium,UK,Email support,French,0.7,True
+DEMO-0550,Billing safety escalation,High,North America,Mobile app,French,0.82,True
+DEMO-0551,Harassment,Medium,North America,Mobile app,Arabic,0.77,False
+DEMO-0552,Scam or fraud,High,Europe,Web form,Arabic,0.84,True
+DEMO-0553,Billing safety escalation,High,North America,Mobile app,English,0.87,True
+DEMO-0554,Misinformation,Medium,North America,Web form,French,0.94,False
+DEMO-0555,Child safety concern,Critical,North America,Web form,Arabic,0.97,True
+DEMO-0556,Harassment,Medium,North America,Mobile app,French,0.73,True
+DEMO-0557,Policy confusion,Medium,Global / Unknown,Email support,English,0.89,False
+DEMO-0558,Scam or fraud,High,Global / Unknown,Web form,English,0.73,True
+DEMO-0559,Platform integrity,Medium,UK,Email support,French,0.81,False
+DEMO-0560,Account abuse,Medium,UK,Mobile app,Other,0.93,False
+DEMO-0561,Self-harm concern,High,Global / Unknown,Web form,English,0.85,True
+DEMO-0562,Platform integrity,Medium,North America,Mobile app,English,0.77,False
+DEMO-0563,Misinformation,Medium,Europe,Email support,Arabic,0.73,True
+DEMO-0564,Child safety concern,Critical,North America,Mobile app,English,0.7,True
+DEMO-0565,Platform integrity,High,Global / Unknown,Mobile app,Arabic,0.67,True
+DEMO-0566,Platform integrity,High,Europe,Web form,French,0.78,True
+DEMO-0567,Policy confusion,Low,Europe,Mobile app,Arabic,0.79,False
+DEMO-0568,Platform integrity,Medium,Europe,Web form,French,0.85,False
+DEMO-0569,Child safety concern,Critical,North America,Mobile app,French,0.92,True
+DEMO-0570,Account abuse,Medium,Global / Unknown,Email support,Other,0.96,False
+DEMO-0571,Platform integrity,Medium,UK,Email support,Other,0.89,False
+DEMO-0572,Billing safety escalation,High,Europe,Web form,English,0.89,True
+DEMO-0573,Self-harm concern,High,Global / Unknown,Web form,Other,0.95,True
+DEMO-0574,Billing safety escalation,High,UK,Email support,Other,0.77,True
+DEMO-0575,Scam or fraud,High,Europe,Web form,Other,0.76,True
+DEMO-0576,Policy confusion,Medium,UK,Web form,French,0.63,True
+DEMO-0577,Billing safety escalation,High,Global / Unknown,Mobile app,Other,0.93,True
+DEMO-0578,Platform integrity,High,Europe,Mobile app,Other,0.87,True
+DEMO-0579,Account abuse,Medium,UK,Mobile app,Other,0.63,True
+DEMO-0580,Account abuse,Medium,Global / Unknown,Email support,English,0.62,True
+DEMO-0581,Self-harm concern,High,Global / Unknown,Web form,English,0.92,True
+DEMO-0582,Child safety concern,Critical,UK,Email support,French,0.66,True
+DEMO-0583,Policy confusion,Low,North America,Email support,Other,0.88,False
+DEMO-0584,Platform integrity,High,North America,Email support,English,0.79,True
+DEMO-0585,Platform integrity,Medium,North America,Web form,Other,0.68,True
+DEMO-0586,Platform integrity,High,Europe,Web form,Arabic,0.76,True
+DEMO-0587,Account abuse,Medium,Global / Unknown,Mobile app,English,0.67,True
+DEMO-0588,Account abuse,Medium,UK,Web form,Arabic,0.64,True
+DEMO-0589,Policy confusion,Low,Global / Unknown,Web form,French,0.69,True
+DEMO-0590,Policy confusion,Medium,UK,Web form,Other,0.95,False
+DEMO-0591,Child safety concern,Critical,Global / Unknown,Web form,Arabic,0.8,True
+DEMO-0592,Harassment,Medium,UK,Mobile app,Other,0.76,False
+DEMO-0593,Billing safety escalation,High,Global / Unknown,Email support,Other,0.68,True
+DEMO-0594,Child safety concern,Critical,Global / Unknown,Email support,French,0.98,True
+DEMO-0595,Policy confusion,Medium,North America,Web form,French,0.66,True
+DEMO-0596,Child safety concern,Critical,Global / Unknown,Mobile app,Other,0.63,True
+DEMO-0597,Billing safety escalation,High,Europe,Web form,Other,0.64,True
+DEMO-0598,Policy confusion,Medium,UK,Web form,Arabic,0.96,False
+DEMO-0599,Policy confusion,Low,Global / Unknown,Web form,French,0.72,True
