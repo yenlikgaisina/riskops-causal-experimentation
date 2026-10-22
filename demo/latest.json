@@ -1,0 +1,77 @@
+{
+  "experiment": "RiskOps A/B \u2013 assisted triage for eligible low/medium-risk reports",
+  "data_provenance": "synthetic_only",
+  "total_units": 20000,
+  "eligible_units": 6051,
+  "protected_units_excluded": 13949,
+  "observation_rate": {
+    "control": 0.6783,
+    "treatment": 0.7515
+  },
+  "estimates": {
+    "naive": {
+      "method": "naive",
+      "control_mean": 0.64466,
+      "treatment_mean": 0.696247,
+      "absolute_uplift": 0.051587,
+      "standard_error": 0.014303,
+      "ci_lower": 0.023553,
+      "ci_upper": 0.079621
+    },
+    "ipw": {
+      "method": "ipw",
+      "control_mean": 0.635073,
+      "treatment_mean": 0.690256,
+      "absolute_uplift": 0.055183,
+      "standard_error": 0.014762,
+      "ci_lower": 0.02625,
+      "ci_upper": 0.084116
+    },
+    "ipw_cuped": {
+      "method": "ipw_cuped",
+      "control_mean": 0.635959,
+      "treatment_mean": 0.690133,
+      "absolute_uplift": 0.054175,
+      "standard_error": 0.01438,
+      "ci_lower": 0.025989,
+      "ci_upper": 0.08236
+    }
+  },
+  "simulation_decision": {
+    "status": "simulation_pass",
+    "reasons": [
+      "Simulation passed predefined evidence and safety checks"
+    ],
+    "evidence_kind": "synthetic_simulation_only",
+    "production_launch_authorised": false
+  },
+  "limitations": [
+    "Synthetic outcomes and injected treatment effect; no external validity",
+    "IPW uses known synthetic observation propensities, not an estimated real-world model",
+    "Missingness is MAR by construction; MNAR opt-outs would bias IPW",
+    "Normal CIs do not handle continuous monitoring or multiple testing",
+    "Safety checks are invariants, not measured proof of real-world safety",
+    "No real deployment or launch is authorised by this report"
+  ],
+  "model_training": {
+    "model": "synthetic_sla_success_baseline_logistic_regression",
+    "training_arm": "control_only",
+    "synthetic_only": true,
+    "n_train": 1545,
+    "n_test": 515,
+    "holdout_brier_score_ipw": 0.21169,
+    "holdout_roc_auc_ipw": 0.6806,
+    "features": [
+      "severity",
+      "region",
+      "channel",
+      "language",
+      "risk_category",
+      "baseline_score",
+      "model_confidence"
+    ],
+    "limitations": "Synthetic model; no real-world calibration, privacy or safety validation",
+    "artifact_sha256": "01925634c646dac228f49c8e80b4ff9690192dc2615f7121e1e79e11b34dc211",
+    "trained_at_utc": "2026-10-22T21:40:23.215933+00:00"
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RiskOps — Experimentation Intelligence</title><style>
+:root{--bg:#0b1220;--card:#172136;--line:#2c3b55;--text:#eef5ff;--muted:#a7b9cf;--teal:#50e0c0;--yellow:#ffd18b}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+main{max-width:1100px;padding:36px 20px 72px;margin:auto}.eyebrow{color:var(--teal);text-transform:uppercase;font-size:12px;letter-spacing:.16em;font-weight:800}
+h1{font-size:clamp(2rem,5vw,3.9rem);line-height:1.1;margin:12px 0}h2{font-size:1.12rem;margin:0 0 14px}
+p,li{color:var(--muted)}.lead{max-width:750px;font-size:1.12rem}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}.value{font-size:2.1rem;font-weight:750;margin:8px 0 0;font-variant-numeric:tabular-nums}
+.small{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.group{margin:20px 0}
+.group-top{display:flex;justify-content:space-between;margin-bottom:8px}.track{height:12px;background:#2c3b55;border-radius:20px;overflow:hidden}.fill{height:100%;background:var(--teal);border-radius:20px}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px 8px}td:first-child{font-weight:700;color:white}
+.status{color:var(--yellow);font-weight:700}.caution{border-left:3px solid var(--yellow);padding:6px 0 6px 15px}
+footer{margin-top:30px;color:var(--muted);font-size:13px}@media(max-width:760px){.grid,.row{grid-template-columns:1fr}table{font-size:12px}}
+</style></head><body><main>
+<div class="eyebrow">Portfolio case study · Synthetic data only</div>
+<h1>RiskOps<br>Experimentation Intelligence</h1>
+<p class="lead">Does assisted triage increase the share of eligible risk reports resolved within SLA? Randomised simulation, missing-feedback correction and human-safety guardrails.</p>
+<div class="grid"><section class="card"><div class="small">Simulated eligible reports</div><div class="value">6,051</div></section>
+<section class="card"><div class="small">Adjusted uplift (CUPED + IPW)</div><div class="value">+5.42 pp</div></section>
+<section class="card"><div class="small">Simulation-only review</div><div class="value" style="font-size:1.55rem">SIMULATION PASS</div></section></div>
+<div class="row"><section class="card"><h2>Estimated SLA success by arm</h2>
+<div class="group"><div class="group-top"><span>Control</span><b>63.60%</b></div><div class="track"><div class="fill" style="width:63.596%"></div></div></div><div class="group"><div class="group-top"><span>Assisted triage</span><b>69.01%</b></div><div class="track"><div class="fill" style="width:69.013%"></div></div></div><p>Rates are estimated from generated outcomes; no actual user reports or service measurements.</p></section>
+<section class="card"><h2>Observation coverage</h2>
+<div class="group"><div class="group-top"><span>Control feedback captured</span><b>67.83%</b></div><div class="track"><div class="fill" style="width:67.830%"></div></div></div><div class="group"><div class="group-top"><span>Treatment feedback captured</span><b>75.15%</b></div><div class="track"><div class="fill" style="width:75.150%"></div></div></div>
+<p>Selection on observed covariates is corrected with simulated known propensity weights.</p></section></div>
+<section class="card" style="margin-top:16px"><h2>Estimators and approximate 95% intervals</h2><div style="overflow-x:auto"><table><thead><tr><th>Estimator</th><th>Uplift</th><th>Confidence interval</th><th>Std. error</th></tr></thead><tbody><tr><td>NAIVE</td><td>+5.16 pp</td><td>+2.36 pp to +7.96 pp</td><td>1.43 pp</td></tr>
+<tr><td>IPW</td><td>+5.52 pp</td><td>+2.62 pp to +8.41 pp</td><td>1.48 pp</td></tr>
+<tr><td>IPW CUPED</td><td>+5.42 pp</td><td>+2.60 pp to +8.24 pp</td><td>1.44 pp</td></tr></tbody></table></div></section>
+<div class="row" style="margin-top:16px"><section class="card"><h2>Safety decision</h2><p class="status">PRODUCTION LAUNCH: NEVER AUTHORISED</p><ul><li>Simulation passed predefined evidence and safety checks</li></ul><p class="caution">Protected reports cannot enter treatment, and mandatory human review remains in place.</p></section>
+<section class="card"><h2>Limitations</h2><ul><li>Synthetic outcomes and injected treatment effect; no external validity</li><li>IPW uses known synthetic observation propensities, not an estimated real-world model</li><li>Missingness is MAR by construction; MNAR opt-outs would bias IPW</li><li>Normal CIs do not handle continuous monitoring or multiple testing</li><li>Safety checks are invariants, not measured proof of real-world safety</li><li>No real deployment or launch is authorised by this report</li></ul></section></div>
+<footer>Research/portfolio demonstration · Generated from synthetic events · Audit and model artefacts available in repository · No live deployment</footer>
+</main></body></html>
