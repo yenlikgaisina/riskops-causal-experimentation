@@ -68,7 +68,7 @@ def test_no_effect_fails_conservative_criterion(templates):
 
 
 def test_eligibility_requires_confidence_and_low_or_medium_risk():
-    row = pd.Series({"risk_category": "Policy confusion", "severity": "Low", "model_confidence": 0.8})
+    row = pd.Series({"risk_category": "Policy confusion", "severity": "Low", "model_confidence": 0.8, "human_review_required": False})
     assert is_eligible(row)
     row["model_confidence"] = 0.7
     assert not is_eligible(row)
