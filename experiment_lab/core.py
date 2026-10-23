@@ -11,13 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SENSITIVE_CATEGORIES = frozenset({
-    "Child safety concern",
-    "Self-harm concern",
-    "Privacy concern",
-    "Scam or fraud",
-    "Billing safety escalation",
-})
+from .policy import SENSITIVE_CATEGORIES, choose_route, eligibility_mask
 REQUIRED_COLUMNS = frozenset({
     "risk_category", "severity", "region", "channel", "language",
     "human_review_required", "model_confidence",
@@ -26,12 +20,8 @@ EXPERIMENT_SALT = "riskops-triage-policy-v1"
 
 
 def is_eligible(row: pd.Series) -> bool:
-    """Test only lower-risk cases; preserve human review across BOTH arms."""
-    return (
-        row["severity"] in {"Low", "Medium"}
-        and row["risk_category"] not in SENSITIVE_CATEGORIES
-        and float(row["model_confidence"]) >= 0.75
-    )
+    """Single-case wrapper for the fail-closed routing eligibility policy."""
+    return bool(eligibility_mask(pd.DataFrame([row])).iloc[0])
 
 
 def arm_for_unit(unit_id: str, salt: str = EXPERIMENT_SALT) -> str:
@@ -69,11 +59,12 @@ def simulate(
     sampled = templates.iloc[rng.integers(0, len(templates), size=population)].copy()
     sampled = sampled.reset_index(drop=True)
     sampled.insert(0, "experiment_unit_id", [f"EXP-{i:07d}" for i in range(population)])
-    sampled["eligible"] = sampled.apply(is_eligible, axis=1)
+    sampled["eligible"] = eligibility_mask(sampled)
     sampled["arm"] = [
         arm_for_unit(unit_id) if eligible else "excluded"
         for unit_id, eligible in zip(sampled["experiment_unit_id"], sampled["eligible"])
     ]
+    sampled["route_action"] = choose_route(sampled["eligible"], sampled["arm"])
     # A pre-treatment, continuous risk/history proxy. This value cannot be
     # affected by treatment and is available even when follow-up is missing.
     sampled["baseline_score"] = rng.beta(2, 2, size=population)
@@ -110,13 +101,17 @@ def simulate(
     sampled["observed"] = observed
     sampled["observation_propensity"] = propensity
     sampled["sla_success"] = success
-    # Hard policy constraint: eligibility does not override human review.
-    sampled["human_review_preserved"] = True
-    sampled["protected_exposure"] = treated & ~eligible
+    # Derived from the actual selected route, not a fabricated safety assertion.
+    sampled["human_review_preserved"] = (
+        ~sampled["human_review_required"] | sampled["route_action"].eq("human_review")
+    )
+    sampled["protected_exposure"] = (
+        sampled["route_action"].eq("assisted_triage") & ~sampled["eligible"]
+    )
     return sampled[[
         "experiment_unit_id", "risk_category", "severity", "region",
         "channel", "language", "model_confidence", "human_review_required",
-        "eligible", "arm", "baseline_score", "observed",
+        "eligible", "arm", "route_action", "baseline_score", "observed",
         "observation_propensity", "sla_success", "human_review_preserved",
         "protected_exposure",
     ]]

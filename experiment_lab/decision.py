@@ -5,7 +5,8 @@ from dataclasses import asdict, dataclass
 
 import pandas as pd
 
-from .estimators import Estimate, estimate_difference
+from .estimators import Estimate, estimate_difference, weight_diagnostics
+from .policy import audit_routing
 
 
 @dataclass(frozen=True)
@@ -30,11 +31,14 @@ def review_experiment(
     if min_observed_per_arm < 1:
         raise ValueError("min_observed_per_arm must be positive")
     reasons: list[str] = []
-    exposed_protected = int(rows["protected_exposure"].sum())
-    if exposed_protected:
-        reasons.append(f"Safety violation: {exposed_protected} protected tickets exposed")
-    if not bool(rows["human_review_preserved"].all()):
-        reasons.append("Human review invariant was violated")
+    audit = audit_routing(rows)
+    for name, count in audit.items():
+        if name != "passed" and count:
+            reasons.append(f"Safety violation: {name} = {count}")
+    if "protected_exposure" in rows and int(rows["protected_exposure"].sum()):
+        reasons.append("Safety violation: reported protected exposure flag was raised")
+    if "human_review_preserved" in rows and not bool(rows["human_review_preserved"].all()):
+        reasons.append("Reported human-review preservation flag was violated")
     for arm in ("control", "treatment"):
         count = int(((rows["arm"] == arm) & rows["observed"]).sum())
         if count < min_observed_per_arm:
@@ -62,6 +66,8 @@ def analyse(rows: pd.DataFrame) -> dict:
         },
         "estimates": estimates,
         "simulation_decision": review_experiment(rows, final).to_dict(),
+        "routing_audit": audit_routing(rows),
+        "weight_diagnostics": weight_diagnostics(rows),
         "limitations": [
             "Synthetic outcomes and injected treatment effect; no external validity",
             "IPW uses known synthetic observation propensities, not an estimated real-world model",

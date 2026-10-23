@@ -14,14 +14,15 @@ See [architecture, estimand, limitations, and roadmap](docs/ARCHITECTURE.md).
 
 ## What is implemented
 
-- Stable SHA-256 unit assignment; no rollout to High/Critical, sensitive, or low-confidence reports.
+- Stable SHA-256 unit assignment; no rollout to High/Critical, sensitive, low-confidence, or mandatory-human-review reports.
 - Reproducible event generation from this repository's synthetic tickets; explicit testable data schema.
 - Naive observed mean, inverse-probability-weighted Hájek estimate, CUPED covariate adjustment and approximate 95% CIs.
 - Feedback-selection mechanism depending on arm and observed attributes; true propensities available in **simulation only**.
-- Conservative review gate that blocks on exposure of protected cases, changes to required human review, insufficient observations, or lack of statistical evidence.
+- Independent route-action audit that blocks on any exposure of protected cases, bypass of mandatory human review, invalid arm assignment, inconsistent eligibility, insufficient observations, or lack of statistical evidence. The status flags cannot override the audit.
 - Offline SLA-success model training (scikit-learn, weighted training, held-out Brier/AUC, versioned artifact manifest).
 - Population-stability monitoring diagnostics by region, language, channel and severity.
 - Stateless FastAPI example, Dockerfile, pytest coverage, GitHub Actions CI, architecture/design notes.
+- Interactive standalone HTML scenario explorer, simulated weight diagnostics and fixed-horizon sample-size/power planning.
 
 ## Run from the **repository root**
 
@@ -67,3 +68,13 @@ The original repo covers risk taxonomy, SLA framework, SQL diagnostics, simulate
 - A roadmap towards model registry, adaptive designs, sequential inference, drift monitoring and staging infrastructure is in the architecture doc.
 
 **Development note:** This module was created with AI-assisted implementation and review. Claims of independent technical design or leadership should be made only for decisions and validation I personally complete and can defend.
+
+## Interactive scenario explorer (new)
+
+`demo/index.html` contains a deterministic browser-only what-if simulator. The panel allows changing the eligible sample size, injected treatment effect and feedback rate, then recomputes synthetic IPW/CUPED point estimates and approximate 95% intervals. It is **independent** of the Python report above it and does not re-run the real Python model.
+
+## Auditable routing (new)
+
+`policy.py` chooses observable `route_action` values and computes `audit_routing()` directly from those actions and source policy fields. The simulation excludes original human-review-required cases from all experimental arms. Regression tests deliberately forge former safety summary flags and verify that tampered routing still blocks.
+
+Use `from experiment_lab.power import sample_size_per_arm` for fixed-horizon two-sample planning. Read its assumptions before interpreting any output.

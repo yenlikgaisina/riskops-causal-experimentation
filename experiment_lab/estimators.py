@@ -88,3 +88,28 @@ def estimate_difference(
         ci_lower=round(uplift - 1.96 * se, 6),
         ci_upper=round(uplift + 1.96 * se, 6),
     )
+
+
+def weight_diagnostics(rows: pd.DataFrame) -> dict:
+    """Report effective observed sample sizes and overlap for each arm.
+
+    Small ESS relative to observed N indicates unstable inverse observation
+    weights. Known simulator propensities don't validate any real-world MAR
+    assumption, so this diagnostic is descriptive, not a deployment gate.
+    """
+    result = {}
+    for arm in ("control", "treatment"):
+        subset = rows.loc[rows["eligible"] & rows["observed"] & rows["arm"].eq(arm)]
+        p = subset["observation_propensity"].to_numpy(dtype=float)
+        if not len(p) or not np.isfinite(p).all() or (p <= 0).any():
+            raise ValueError(f"Invalid or missing weights for {arm}")
+        w = 1 / p
+        ess = float(w.sum() ** 2 / np.square(w).sum())
+        result[arm] = {
+            "n_observed": len(w),
+            "effective_sample_size": round(ess, 1),
+            "ess_fraction": round(ess / len(w), 4),
+            "min_observation_propensity": round(float(p.min()), 4),
+            "max_weight": round(float(w.max()), 3),
+        }
+    return result

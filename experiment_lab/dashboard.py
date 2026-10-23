@@ -4,6 +4,8 @@ from __future__ import annotations
 from html import escape
 from pathlib import Path
 
+from .interactive_panel import PANEL, STYLE, SCRIPT
+
 
 def render_dashboard(report: dict, output: Path) -> None:
     methods = report["estimates"]
@@ -36,7 +38,7 @@ p,li{{color:var(--muted)}}.lead{{max-width:750px;font-size:1.12rem}}.grid{{displ
 table{{border-collapse:collapse;width:100%;font-size:14px}}th,td{{text-align:left;border-bottom:1px solid var(--line);padding:12px 8px}}td:first-child{{font-weight:700;color:white}}
 .status{{color:var(--yellow);font-weight:700}}.caution{{border-left:3px solid var(--yellow);padding:6px 0 6px 15px}}
 footer{{margin-top:30px;color:var(--muted);font-size:13px}}@media(max-width:760px){{.grid,.row{{grid-template-columns:1fr}}table{{font-size:12px}}}}
-</style></head><body><main>
+{STYLE}</style></head><body><main>
 <div class="eyebrow">Portfolio case study · Synthetic data only</div>
 <h1>RiskOps<br>Experimentation Intelligence</h1>
 <p class="lead">Does assisted triage increase the share of eligible risk reports resolved within SLA? Randomised simulation, missing-feedback correction and human-safety guardrails.</p>
@@ -51,7 +53,8 @@ footer{{margin-top:30px;color:var(--muted);font-size:13px}}@media(max-width:760p
 <section class="card" style="margin-top:16px"><h2>Estimators and approximate 95% intervals</h2><div style="overflow-x:auto"><table><thead><tr><th>Estimator</th><th>Uplift</th><th>Confidence interval</th><th>Std. error</th></tr></thead><tbody>{rows}</tbody></table></div></section>
 <div class="row" style="margin-top:16px"><section class="card"><h2>Safety decision</h2><p class="status">PRODUCTION LAUNCH: NEVER AUTHORISED</p><ul>{issues}</ul><p class="caution">Protected reports cannot enter treatment, and mandatory human review remains in place.</p></section>
 <section class="card"><h2>Limitations</h2><ul>{limitations}</ul></section></div>
+{PANEL}
 <footer>Research/portfolio demonstration · Generated from synthetic events · Audit and model artefacts available in repository · No live deployment</footer>
-</main></body></html>'''
+</main>{SCRIPT}</body></html>'''
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(html, encoding="utf-8")
