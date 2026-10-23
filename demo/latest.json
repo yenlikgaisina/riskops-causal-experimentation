@@ -45,6 +45,31 @@
     "evidence_kind": "synthetic_simulation_only",
     "production_launch_authorised": false
   },
+  "routing_audit": {
+    "invalid_eligibility": 0,
+    "invalid_assignments": 0,
+    "assigned_excluded": 0,
+    "exposed_protected": 0,
+    "missing_mandatory_review": 0,
+    "mismatched_actions": 0,
+    "passed": true
+  },
+  "weight_diagnostics": {
+    "control": {
+      "n_observed": 2060,
+      "effective_sample_size": 1974.2,
+      "ess_fraction": 0.9583,
+      "min_observation_propensity": 0.34,
+      "max_weight": 2.941
+    },
+    "treatment": {
+      "n_observed": 2265,
+      "effective_sample_size": 2185.8,
+      "ess_fraction": 0.965,
+      "min_observation_propensity": 0.4,
+      "max_weight": 2.5
+    }
+  },
   "limitations": [
     "Synthetic outcomes and injected treatment effect; no external validity",
     "IPW uses known synthetic observation propensities, not an estimated real-world model",
@@ -72,6 +97,6 @@
     ],
     "limitations": "Synthetic model; no real-world calibration, privacy or safety validation",
     "artifact_sha256": "01925634c646dac228f49c8e80b4ff9690192dc2615f7121e1e79e11b34dc211",
-    "trained_at_utc": "2026-10-22T21:40:23.215933+00:00"
+    "trained_at_utc": "2026-10-23T06:54:18.911867+00:00"
   }
 }
