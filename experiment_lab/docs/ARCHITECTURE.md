@@ -31,7 +31,7 @@ CUPED uses the pre-treatment `baseline_score` and pooled regression coefficient 
 
 ## Safety and governance requirements
 
-1. **Eligibility gate:** no high/critical severity, sensitive category, or low-confidence case can enter the treatment arm. The protected category list is inherited from the parent project.
+1. **Eligibility gate:** no high/critical severity, sensitive category, low-confidence case, or case already requiring mandatory human review can enter the treatment arm. The protected category list is inherited from the parent project.
 2. **Preserve human oversight:** assignment never changes the existing `human_review_required` field.
 3. **Fail closed:** review cannot pass when any protected case was exposed, a review invariant failed, or observed sample size is inadequate.
 4. **No real launch authorisation:** `production_launch_authorised=false` is hard-coded in the result. Even `simulation_pass` means *only* that predeclared checks passed on artificial data.
@@ -72,3 +72,11 @@ Write an ADR for treatment assignment and one for feedback missingness. Request 
 ## ML lifecycle prototype
 
 `modeling.py` trains a scikit-learn SLA-success baseline from **observed control-arm** events only (to prevent treatment leakage); uses inverse-observation-propensity sample weights, an isolated stratified holdout, Brier score/AUC, a SHA-256 artifact digest and model manifest. The simple model is deliberately not deployed for safety routing. `monitoring.py` computes categorical PSI as an example of an operational distribution-shift alert; real production would also require label delay handling, model calibration/drift assessment, performance by cohort and action policies. Only load locally trusted `joblib` artifacts.
+
+## October 2026 hardening update
+
+The initial experiment wrote `human_review_preserved=True` without checking any selected routing action. This is now replaced by explicit `route_action` values for every synthetic event, chosen independently in `policy.py`. `audit_routing()` recalculates expected policy eligibility and flags any protected route exposure, bypass of a source-required review, invalid arm or mismatched action. A simulated decision fails even if its former summary status fields have been forged to indicate safety.
+
+The HTML report now separates the canonical Python-estimated experiment (top) from a deterministic **browser-only exploratory simulator** (bottom). It is not a live dashboard, and browser what-if results are not guaranteed to equal canonical Python estimates because the small in-browser generator uses simplified assumptions. CI estimates in both engines remain approximate and fixed-horizon.
+
+`power.py` supplies a fixed-horizon independent Bernoulli sample-size approximation; `weight_diagnostics()` gives observed sample size, effective sample size and propensity ranges for interpretation of oracle IPW weights. Neither constitutes proof of missing-at-random feedback, production safety, or valid sequential inference.
